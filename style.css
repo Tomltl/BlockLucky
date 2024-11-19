@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css?family=Aleo");
+
+:root {
+  font-family: "Aleo", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgb(119, 13, 13);
+  background: radial-gradient(
+    circle,
+    black,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("./DALL·E\ 2024-11-19\ 15.38.32\ -\ A\ minimalistic\,\ elegant\ image\ with\ a\ black\ background\ showcasing\ a\ few\ golden\ fireworks.\ The\ fireworks\ are\ arranged\ in\ a\ balanced\ composition\,\ with\ va.webp");
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.bottomContainer {
+    margin-bottom: 50px;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Thanks Traversy Media for this text background animation tut:
+   https://www.youtube.com/watch?v=lX5LZTWc4f8&t
+*/
+.label {
+  font-size: 2.2rem;
+  background: url("https://res.cloudinary.com/nikita-rudenko/image/upload/v1544906837/stripe_c982eebe592d6c30f2034f5ce80b1fc6.png");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: moveBg 150s linear infinite;
+  margin: 0;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 30%;
+  }
+  100% {
+    background-position: 1000% 500%;
+  }
+}
+
+.middle {
+  text-align: center;
+  user-select: none;
+}
+
+.time {
+  color: #d99c3b;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.time span {
+  padding: 0 14px;
+  font-size: 0.8rem;
+}
+
+.time span div {
+  font-size: 3rem;
+}
+
+@media (max-width: 740px) {
+  .label {
+    font-size: 1.7rem;
+  }
+  .time span {
+    padding: 0 16px;
+    font-size: 0.6rem;
+  }
+  .time span div {
+    font-size: 2rem;
+  }
+}
+
+.login {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en main */
+    font-size: 1rem;
+  }
+
+  .startLottery {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en main */
+    font-size: 1rem;
+  }
+
+  .endLottery {
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en main */
+    font-size: 1rem;
+  }
+
+  .pickWinner {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en main */
+    font-size: 1rem;
+  }
+  
+  .login:hover {
+    background-color: #45a049; /* Changer la couleur au survol */
+  }
+
+  .text {
+    color: white;
+  }
+
+  .ticket {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .userWallet,
+  .loto {
+    flex: 1; /* Les deux cartes prennent la même largeur */
+    padding: 15px;
+    border-radius: 10px; /* Coins arrondis */
+    background: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    text-align: left;
+    color: white; /* Couleur du texte */
+  }
+  
+  .userWallet {
+    border: 1px solid red; /* Bordure légère */
+  }
+  
+  .loto {
+    border: 1px solid blue; /* Bordure légère */
+  }
+  
+  /* Style pour les titres ou sections de texte à l'intérieur des cartes */
+  .userWallet .text,
+  .loto .text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Ajouter un léger effet au survol */
+  .userWallet:hover,
+  .loto:hover {
+    transform: scale(1.02); /* Zoom léger */
+    transition: transform 0.3s ease;
+  }
+  
+  .connexion {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
+
+  .metaMask {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 16px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: flex-start;  /* Alignement horizontal par défaut */
+    align-items: center;         /* Centrer verticalement */
+    margin-right: 16px;
+    cursor: pointer;
+  }  
+
+  .content {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 10px;
+  }
+
+  /* .cardContainer {
+    gap : 20px;
+  } */
+  
+  .card {
+    width: 400px; /* Largeur fixe */
+    display: flex;
+    flex-direction: column; /* Les informations à l'intérieur sont en colonnes */
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    background-color: #36342E;/* Fond semi-transparent */
+    color: white; /* Couleur du texte */
+    gap: 20px;
+  }
+  
+  .card h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .card .text {
+    margin-bottom: 10px; /* Espacement entre les lignes d'informations */
+  }
+  
+  .card button {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #d99c3b; /* Couleur de fond dorée */
+    color: black; /* Texte noir pour le contraste */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Ajout d'une animation fluide */
+    border-width: 0;
+    color: white;
+  }
+  
+  .card button:hover {
+    background-color: #be8a36; /* Fond doré foncé au survol */
+    color: white; /* Texte blanc pour le contraste */
+  }
+  
+  
+  .content2 {
+    display: flex;
+    gap: 30px;
+  }
+
+  .name {
+    margin: 0;
+  }
+
+  .separator {
+    margin-top: 0;
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);;
+  }
+  
+  .title {
+    font-weight: 900;
+  }
+
+  .button {
+    margin: 16px;
+    padding: 10px 20px;
+    background-color: #d99c3b; /* Couleur de fond dorée */
+    color: black; /* Texte noir pour le contraste */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Ajout d'une animation fluide */
+    border-width: 0;
+    color: white;
+  }
+
+  .button:hover {
+    background-color: #be8a36; /* Fond doré foncé au survol */
+    color: white; /* Texte blanc pour le contraste */
+  }
+
+  .lastGain {
+    color: white;
+    width: 100%;
+    text-align: center;
+  }

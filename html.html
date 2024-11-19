@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loterie</title>
+    <link rel="icon" type="image/x-icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="connexion">
+      <div id="connectButton" class="row">
+        <button class="button">Se Connecter</button>
+      </div>
+      <button id="disconnectButton" class="button">Se déconnecter</button>
+    </div>
+    <!-- <div class="all"> -->
+    <div class="middle">
+      <h1 class="label">Ether Bay Loterie</h1>
+      <div class="time">
+        <span>
+          <div id="d">00</div>
+          Jours
+        </span>
+        <span>
+          <div id="h">00</div>
+          heures
+        </span>
+        <span>
+          <div id="m">00</div>
+          Minutes
+        </span>
+        <span>
+          <div id="s">00</div>
+          Secondes
+        </span>
+      </div>
+    </div>
+    <div class="bottomContainer">
+      <div class="content">
+        <!-- <h1>ETHER BAY</h1> -->
+        <div class="content2">
+          <!-- Card Utilisateur -->
+          <div class="card utilisateur">
+            <h2>Utilisateur</h2>
+            <div>
+              <div>
+                <p class="name">Adresse :</p>
+                <hr class="separator" />
+              </div>
+              <div id="userAddress" class="text"></div>
+            </div>
+            <div>
+              <div>
+                <p class="name">Votre solde :</p>
+                <hr class="separator" />
+              </div>
+              <div id="userBalance" class="text"></div>
+            </div>
+            <div>
+              <div>
+                <p class="name">Votre nombre de tickets :</p>
+                <hr class="separator" />
+              </div>
+              <div id="userTickets" class="text"></div>
+            </div>
+            <button id="acheterTicket">Acheter un ticket 💶</button>
+          </div>
+
+          <!-- Card Lotterie -->
+          <div class="card loterie">
+            <h2 class="title">Lotterie</h2>
+            <div>
+              <div>
+                <p class="name">Nombre total de tickets :</p>
+                <hr class="separator" />
+              </div>
+              <div id="totalTickets" class="text"></div>
+            </div>
+            <div>
+              <div>
+                <p class="name">Solde du Loto :</p>
+                <hr class="separator" />
+              </div>
+              <div id="contractBalance" class="text"></div>
+            </div>
+            <div id="gagnant" class="text"></div>
+            <div id="dernierGain" class="lastGain"></div>
+            <!-- <div id="countdown" class="text"></div> -->
+          </div>
+
+          <!-- Card Admin -->
+          <div class="card admin">
+            <div class="content">
+              <h2>Admin</h2>
+              <div class="buttonContainer">
+                <button id="demarrerLoterie" style="display: none">
+                  Lancer la loterie 🎰
+                </button>
+                <button id="cloturerLoterie" style="display: none">
+                  Arrêter la loterie 🛑
+                </button>
+                <button onclick="stopcounter()">
+                  arrêter le chronomètre ⏰
+                </button>
+                <button id="tirerGagnant" style="display: none">
+                  Tirer le gagnant 🏆
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
